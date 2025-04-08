@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: '04b30';
+  src: local('04b30'), url('./assets/fonts/04B_30_.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  /* margin: 0;
+  padding: 0;
+  outline: none;
+  overflow: hidden;
+  user-select: none;
+  box-sizing: border-box;
+  border: none;
+  font-family: "Outfit", sans-serif; */
+  transition: all ease 0.25s;
+}
+
+body {
+  /* height: 100vh; */
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* styles.css */
+/* Animar a insígnia */
+@keyframes insignea {
+  0% {
+    transform: rotateY(0deg) scale(1);
+  }
+  25% {
+    transform: rotateY(20deg) scale(1.05);
+  }
+  50% {
+    transform: rotateY(50deg) scale(1.05);
+  }
+  75% {
+    transform: rotateY(20deg) scale(1.02);
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+.insignea {
+  animation: insignea 6s linear infinite;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 0 10px rgba(72, 135, 202, 0.7))
+          drop-shadow(0 0 20px rgba(72, 135, 202, 0.5))
+          drop-shadow(0 0 30px rgba(72, 135, 202, 0.3));
+}
